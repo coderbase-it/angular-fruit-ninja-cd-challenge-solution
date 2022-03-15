@@ -1,0 +1,18 @@
+<div class="container">
+  <h3>Welcome to Fruit Ninja Change Detection Challenge</h3>
+  <h6>Click on FakeButton to see log</h6>
+
+  <div>
+    <!-- <h4>Random fruit {{ obs?.icon }}</h4> -->
+    <button (click)="fakeMethod()">Fake Button</button>
+  </div>
+  <select [compareWith]="compareFn" [formControl]="fruitControl">
+    <option [ngValue]="fruit" *ngFor="let fruit of fruits">
+      {{ fruit.name }} - {{ fruit.icon }}
+    </option>
+  </select>
+  <button (click)="addFruit()">Add Fruit</button>
+
+  <app-list-fruits [fruits]="selectedFruits"> </app-list-fruits>
+  {{ check() }}
+</div>

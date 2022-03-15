@@ -1,0 +1,12 @@
+<div class="container">
+  <h4>Random fruit {{ (obs$ | async)?.icon }}</h4>
+  <h5>List of Fruits</h5>
+  <ul *ngFor="let fruit of fruits">
+    <app-fruit [fruit]="fruit"></app-fruit>
+  </ul>
+
+  {{ check() }}
+  <div>
+    <button (click)="fakeMethod()">Fake Button</button>
+  </div>
+</div>
